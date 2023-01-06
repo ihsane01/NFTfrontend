@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>shopping cart</h2>
+<mat-dialog-content class="mat-typography">
+   
+        <div  class="cart">
+            <!-- <span class="icon" (click)="openCart=!openCart">
+              <a  mat-stroked-button  type="button" >
+              
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+
+             </a>
+            </span> -->
+
+
+
+
+
+
+            <div class="container">
+                <div class="shopping-cart">
+                  <div class="shopping-cart-header">
+                    <div class="shopping-cart-total">
+                      <span class="lighter-text">Total:</span>
+                      <span class="main-color-text">$2,229.97</span>
+                    </div>
+                  </div> <!--end shopping-cart-header -->
+              
+                  <ul class="shopping-cart-items">
+                    <div *ngFor="let item of items  ">
+                    <li class="clearfix">
+                      <img  src={{item.image}} alt="item1" />
+                      <span class="item-name"> {{item.name}}</span>
+                      <span class="item-price">{{formatEther(item.totalPrice)}} ETH</span>
+                      <button  class="icon"  class="btn btn-transparent" (click)="deletecart(item.itemId._hex)">
+                        <span class="material-icons">delete</span>
+                    </button> 
+                    </li>
+                 
+                </div>
+                 
+              
+                 
+                  </ul>
+                  <button mat-raised-button color="primary" (click)="Buypanier()">BUY</button>
+
+                </div> <!--end shopping-cart -->
+              </div> <!--end container -->
+
+
+          </div>
+     
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>
