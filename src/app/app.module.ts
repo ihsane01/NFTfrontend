@@ -27,46 +27,47 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { CreateNftComponent } from './create-nft/create-nft.component';
 import { MyListedItemsComponent } from './Items/my-listed-items/my-listed-items.component';
 import { MyPurchasesComponent } from './Items/my-purchases/my-purchases.component';
 import { PanierComponent } from './panier/panier.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
-  declarations: [
-    HomeComponent,
-    AppComponent,
-    NavbarComponent,
-    CreateNftComponent,
-    MyListedItemsComponent,
-    MyPurchasesComponent,
-    PanierComponent
-  ],
-  imports: [
-    MatDialogModule,
-    MatIconModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    MatCardModule,
-    FormsModule,
-    MatGridListModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatDividerModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatMenuModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    declarations: [
+        HomeComponent,
+        AppComponent,
+        NavbarComponent,
+        CreateNftComponent,
+        MyListedItemsComponent,
+        MyPurchasesComponent,
+        PanierComponent,
+        DashboardComponent
+    ],
+    imports: [
+        NgApexchartsModule,
 
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [PanierComponent]
-
+        MatDialogModule,
+        MatIconModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        MatCardModule,
+        FormsModule,
+        MatGridListModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatDividerModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatProgressSpinnerModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

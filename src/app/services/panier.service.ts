@@ -29,6 +29,8 @@ deletecartItmes(id:any )
   return this.http.delete<panier>(`${this._url+"delete"}/${id}`);
 
 }
+
+
 deletenftsold(id:any )
 {console.log("deleetefrompanier")
 
@@ -39,4 +41,7 @@ getCartItems(id:any): Observable<any>  {
   return this.http.get(`${this._url+"findAllPanier"}/${id}`);
 }
 
+MustFav()  {
+  return this.http.get(this._url+"favoriteMust");
+}
 }

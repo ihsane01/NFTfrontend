@@ -1,0 +1,144 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-warning card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">local_mall</i>
+                      </div>
+                      <p class="card-category">ALL NFTS </p>
+                      <h3 class="card-title">{{itemCount}}
+                          <small>NFT</small>
+                      </h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                        <i class="material-icons">public</i>NFT MARKET
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">euro_symbol</i>
+                      </div>
+                      <p class="card-category">SOLD NFT </p>
+                      <h3 class="card-title">{{soldItems}}</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">public</i>NFT MARKET
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-danger card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">timer</i>
+                      </div>
+                      <p class="card-category"> UNSOLDE NFT </p>
+                      <h3 class="card-title">{{notsoldItems}}</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">public</i>NFT MARKET
+                      </div>
+                  </div>
+              </div>
+          </div>
+         
+      </div>
+      <div class="row">
+        
+          <div class="col-md-7">
+          
+<!-- <div class="a-box">
+  <div class="img-container">
+    <div class="img-inner">
+      <div class="inner-skew">
+        <img src="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+      </div>
+    </div>
+  </div>
+  <div class="text-container">
+    <h3>A blue bird</h3>
+    <div>
+      This a demo experiment to skew image container. It looks good.
+  </div>
+</div>
+</div> -->
+
+
+<div *ngIf="showimage"  class="container">
+    <div class="card1">
+       <div class="card1__image-container">
+         <img class="card1__image" src={{itemfav.image}} alt="">
+      </div>
+        
+        <svg class="card1__svg" viewBox="0 0 800 500">
+  
+          <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333"/>
+          <path class="card1__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"/>
+        </svg>
+      
+       <div class="card1__content">
+         <h1 class="card1__title">BEST NFT IN THE MARKET </h1>
+       <p>{{itemfav.description}}</p>
+      </div>
+    </div>
+  </div>
+              <!-- <div   class="card card-chart">
+                  <div  class="card-header card-header-white">
+                    <div  *ngIf="showimage"  id="chart">
+                        <img mat-card-image style="height: 60%;" src={{itemfav.image}} alt="Photo of a NFT">
+
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title">{{itemfav.description}}</h4>
+                      <p class="card-category">
+                          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">access_time</i> updated 4 minutes ago
+                      </div>
+                  </div>
+              </div> -->
+              
+          </div>
+        
+          <div class="col-md-4">
+              <div class="card card-chart">
+                <div class="card-header card-header-white">
+                <div   *ngIf="showText" id="chart">
+                    <apx-chart
+                      [series]="sold"
+                      [chart]="chartOptions.chart1"
+                      [labels]="chartOptions.labels1"
+                      [responsive]="chartOptions.responsive1"
+                    ></apx-chart>
+                  </div>
+                  </div>
+                  <div class="card-body">
+                      <h4 class="card-title">Pourcentage</h4>
+                      <p class="card-category">SOLD/UNSOLD</p>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">access_time</i> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+     
+      </div>
+  </div>
+</div>

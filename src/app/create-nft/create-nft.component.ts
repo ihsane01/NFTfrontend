@@ -2,7 +2,7 @@ import { environment } from './../../environments/environment';
 import { ethers } from "ethers"
 import { ContractService } from './../services/contract.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators,FormBuilder,FormGroup } from '@angular/forms';
+import { FormControl, Validators,UntypedFormBuilder,UntypedFormGroup } from '@angular/forms';
 const axios = require('axios');
 const FormData = require('form-data');
 // //this will allow us to upload the metadata aabout the newly created nft
@@ -20,13 +20,13 @@ const FormData = require('form-data');
 })
 export class CreateNftComponent implements OnInit {
   LoadImageFinish=true
-  form:FormGroup
+  form:UntypedFormGroup
   key = environment.REACT_APP_PINATA_KEY
   secret =environment.REACT_APP_PINATA_SECRET;
   nft:any = {};
   marketplace:any = {};
   image:any;
-  constructor(private formBuilder:FormBuilder,private contractService:ContractService) { 
+  constructor(private formBuilder:UntypedFormBuilder,private contractService:ContractService) { 
     this.nft=this.contractService.nftContract
     console.log(this.contractService.nftContract)
     this.marketplace=this.contractService.marketplaceContract

@@ -97,15 +97,19 @@ console.log(this.panierlist[j].idNFT)
     }
 
     async deletecart(nftid:any ) {
-  
+
       for(let i = 0; i < this.panierlist.length; i++)
       {
       
       if(this.panierlist[i].idNFT==nftid)
-      {
+      {          console.log("xxxxxxxxxxxxxxxx")
+      console.log(this.panierlist[i].idNFT)
+      console.log(nftid)
+
         this.panierService.deletecartItmes(this.panierlist[i].id).subscribe((response)=>{
           // this.products=response.produits;
           console.log(nftid);
+
           console.log("deleted")
           console.log(this.panierlist[i].idNFT)
       
@@ -126,8 +130,7 @@ console.log(this.panierlist[j].idNFT)
       console.log(this.panierlist[i].idNFT)
   
     });
-    
-  }
+    }
   this._getCart();
     }
 }
